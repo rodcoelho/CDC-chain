@@ -92,3 +92,5 @@ while True:
     print("Hash {}".format(block_to_add.hash))
     print("Time: {}".format(block_to_add.timestamp))
     print("Block {} has been added to the blockchain\n".format(block_to_add.index))
+    print("Current chain: ")
+    chain.printchain()
