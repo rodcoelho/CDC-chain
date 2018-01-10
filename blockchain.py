@@ -12,6 +12,9 @@ class Chain:
     def addinfo(self,data):
         self.apponly.append(data)
 
+    def printchain(self):
+        print(self.apponly)
+
     def size(self):
         return len(self.apponly)
 
@@ -47,7 +50,9 @@ class Block:
                    str(self.symp3).encode('utf-8') +
                    str(self.days).encode('utf-8') +
                    str(self.previous_hash).encode('utf-8'))
-        return sha.hexdigest()
+        hex = sha.hexdigest()
+        chain.addinfo(hex)
+        return hex
 
 def create_genesis_block():
     return Block(0, date.datetime.now(), "Genesis Block", "0",
@@ -65,9 +70,9 @@ def next_block(last_block,doctorID,outbreak,
                  symp1=symp1,symp2=symp2,symp3=symp3,days=days)
 
 # Create blockchain and genesis
+chain = Chain()
 blockchain=[create_genesis_block()]
 previous_block = blockchain[0]
-chain = Chain
 
 while True:
     doctorID        = input("What is your Unique Physician Identification number?\n")
@@ -87,15 +92,3 @@ while True:
     print("Hash {}".format(block_to_add.hash))
     print("Time: {}".format(block_to_add.timestamp))
     print("Block {} has been added to the blockchain\n".format(block_to_add.index))
-
-
-
-
-#     block_to_add = next_block(previous_block)
-#     blockchain.append(block_to_add)
-#     previous_block = block_to_add
-#     print("Block {} has been added to the blockchain".format(block_to_add.index))
-#     print("Hash {}".format(block_to_add.hash))
-#     print("Time: {}".format(block_to_add.timestamp))
-#     print()
-
