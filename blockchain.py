@@ -76,8 +76,8 @@ previous_block = blockchain[0]
 
 while True:
     doctorID        = input("What is your Unique Physician Identification number?\n")
-    outbreak        = input("What Outbreak ID would you like to PERMANENTLY log to the OutbreakChain?\n")
-    patientID       = input("Type Patient's ID\nFirst_Last_DOB\nEx: John_Doe_09121992\n")
+    outbreak        = input("What CDC Outbreak ID would you like to PERMANENTLY log to the OutbreakChain?\n")
+    patientID       = input("Patient's ID: First_Last_DOB\nEx: John_Doe_09121992\n")
     zipcode         = input("What is the current zipcode?\n")
     symp1           = input("First symptom: ")
     symp2           = input("Second symptom: ")
