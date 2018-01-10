@@ -4,7 +4,7 @@ Blockchain public record for outbreaks of disease - stores information about geo
 
 #### Step 1 - Setup
 
-Clone the repository: `$ git clone https://github.com/rodcoelho/terminal_trader.git`
+Clone the repository: `$ git clone https://github.com/rodcoelho/OutbreakChain.git`
 
 #### Step 2: Run
 Run `$ python3 blockchain.py`
